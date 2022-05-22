@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function ReviewDetsils() {
+export default function ReviewDetsils({navigation}) {
     return(
         <View style={globalStyles.container}>
-            <Text>ReviewDetsils Screen</Text>
+            <Text>{ navigation.getParam('title') }</Text>
+            <Text>{ navigation.getParam('body') }</Text>
+            <Text>{ navigation.getParam('rating') }</Text>
         </View>
     )
 }
